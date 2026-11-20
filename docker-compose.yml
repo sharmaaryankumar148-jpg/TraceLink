@@ -1,0 +1,39 @@
+# API + background worker + Redis, with SQLite on a shared volume.
+# Run: docker compose up --build   then open http://localhost:8000/docs
+services:
+  redis:
+    image: redis:7-alpine
+
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      QUEUE_MODE: redis
+      REDIS_URL: redis://redis:6379/0
+      DATABASE_URL: sqlite:////data/tracelink.db
+    volumes:
+      - data:/data
+    depends_on:
+      - redis
+
+  worker:
+    build: .
+    command: python worker.py
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      QUEUE_MODE: redis
+      REDIS_URL: redis://redis:6379/0
+      DATABASE_URL: sqlite:////data/tracelink.db
+    volumes:
+      - data:/data
+    depends_on:
+      - redis
+
+volumes:
+  data:

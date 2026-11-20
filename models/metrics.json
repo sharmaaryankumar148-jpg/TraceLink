@@ -1,0 +1,65 @@
+{
+  "dataset": "synthetic_complaints.csv",
+  "split": "held-out templates",
+  "train_size": 168,
+  "test_size": 42,
+  "accuracy": 0.6429,
+  "macro_f1": 0.5555,
+  "per_class": {
+    "account_hacking": {
+      "precision": 0.46153846153846156,
+      "recall": 1.0,
+      "f1-score": 0.631578947368421,
+      "support": 6.0
+    },
+    "investment_scam": {
+      "precision": 0.75,
+      "recall": 1.0,
+      "f1-score": 0.8571428571428571,
+      "support": 6.0
+    },
+    "job_scam": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 6.0
+    },
+    "lottery_scam": {
+      "precision": 0.3333333333333333,
+      "recall": 0.5,
+      "f1-score": 0.4,
+      "support": 6.0
+    },
+    "phishing": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 6.0
+    },
+    "sextortion": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1-score": 0.0,
+      "support": 6.0
+    },
+    "upi_fraud": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1-score": 1.0,
+      "support": 6.0
+    },
+    "accuracy": 0.6428571428571429,
+    "macro avg": {
+      "precision": 0.5064102564102564,
+      "recall": 0.6428571428571429,
+      "f1-score": 0.5555316863587539,
+      "support": 42.0
+    },
+    "weighted avg": {
+      "precision": 0.5064102564102564,
+      "recall": 0.6428571428571429,
+      "f1-score": 0.555531686358754,
+      "support": 42.0
+    }
+  }
+}

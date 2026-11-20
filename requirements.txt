@@ -1,0 +1,17 @@
+fastapi==0.165.0
+uvicorn[standard]==0.54.0
+SQLAlchemy==2.1.9
+pydantic==2.14.4
+python-multipart==0.0.34
+PyJWT==2.15.1
+scikit-learn==1.9.1
+joblib==1.6.0
+redis==8.1.0
+
+# dev / tests
+pytest==9.2.0
+httpx==0.28.1
+fakeredis==2.40.0
+
+# optional: LLM enrichment (set GEMINI_API_KEY to enable)
+# google-genai
